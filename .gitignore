@@ -1,0 +1,24 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Venv
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# VS code config
+.vscode/
+
+# Django sqlite db
+web/db.sqlite3
+
+# Env variables
+.env
+*.env
+
+# Unwanted text file
+Readme.txt
+

@@ -1,0 +1,64 @@
+{% extends "base.html" %} <!--Links this child template(home.html) to the parent template(base.html)-->
+{% load static %} <!--loading the template tag of static into this template -->
+
+{% block title %} AI MODEL {% endblock %} <!--Defining the title of this template that will be inherited by the parent template(base.html)-->
+{% block style %}<link rel="stylesheet" href="{% static 'css/model.css' %}">{% endblock %} <!--Defining the stylesheet of this template that will be inherited by the parent template(base.html)-->
+
+{% block loggedin_content %} <!--Defining the logged in content that will be inherited by the parent template(base.html)-->
+<div id="modelpage">
+    <div id="mainpage">
+        {% if results %} <!--After the form has been submitted and prediction has been made, the results are passed to this template by the the view function of this template and this code block will run-->
+            <h1>Predicted Graph:</h1>
+            <img class="model_graph" src="data:image/png;base64,{{results.Graph}}" alt="Predicted Graph"> <!--The source of the graph is an internal data url for a base64-encoded png image stored in the context that is passed from the view fucntion of this template. The base64-encoded png image is decoded and then the resulting image is displayed.-->
+            <div class="details">
+                <h2>Prediction Details: </h2>
+                <ul> <!--The values of the "results" dictionary stored in the context of view function of this template is passed to this template and displayed here.-->
+                    <li>Predicted signal: {{results.Trend}}</li>
+                    <li>Overall accuracy of predicted trends: {{results.Overall_Accuracy}}</li>
+                    <li>Accuracy of predicted up-trends: {{results.Up_Trend_Accuracy}}</li>
+                    <li>Accuracy of predicted down-trends: {{results.Down_Trend_Accuracy}}</li>
+                </ul>
+            </div>
+        {% else %} <!--This code block will run if the results are not passed to this template by the view function of this template-->
+            <h1>Predicted Graph:</h1>
+            <div class="model_graph">
+                <h3>The predicted graph will be displayed here!</h3>
+            </div>
+            <div class="details">
+                <h2>Prediction Details: </h2>
+                <ul>
+                    <li>Predicted signal: </li>
+                    <li>Overall accuracy of predicted trends: </li>
+                    <li>Accuracy of predicted up-trends: </li>
+                    <li>Accuracy of predicted down-trends: </li>
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+
+    <div id="sidepage">
+        <form method="POST" class="form"> <!--Once this form is submitted, a request from the user will be sent to the view function of this template using the POST method-->
+            {% csrf_token %} <!--For Cross-Site Request Forgery(CSRF) protection-->
+            <!--The fields of the "form" that's stored in the context of view function of this template is passed to this template and displayed below.-->
+            <h1 class="horizontal-center">USER INPUT</h1>
+            <label for="cryptocurrency">Cryptocurrency name:</label>
+            {{form.cryptocurrency}}
+            <br>
+            <label for="n_ahead">Number of days ahead:</label>
+            {{form.n_ahead}}
+            <br>
+            <button type="submit" class="form-btn">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+{% block loggedout_content %} <!--Defining the logged out content that will be inherited by the parent template(base.html)-->
+<div id="accessdeniedpage">
+    <div id="accessdenied">
+        <h1>Access Denied!</h1>
+        <p> In order to access this page, you'll need to login to this website first!</p><br>
+        <p> Click <a href="{% url 'login' %}">here</a> to login to the website.</p>
+        <p> Don't have an account? Click <a href="{% url 'signup' %}">here</a> to sign up first</p>
+    </div>
+</div>
+{% endblock %}

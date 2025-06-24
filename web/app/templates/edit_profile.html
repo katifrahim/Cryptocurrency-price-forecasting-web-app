@@ -1,0 +1,44 @@
+{% extends "base.html" %} <!--Links this child template(home.html) to the parent template(base.html)-->
+{% load static %} <!--loading the template tag of static into this template -->
+
+{% block title %}Edit Profile{% endblock %} <!--Defining the title of this template that will be inherited by the parent template(base.html)-->
+{% block style %}<link rel="stylesheet" href="{% static 'css/forms.css' %}">{% endblock %} <!--Defining the stylesheet of this template that will be inherited by the parent template(base.html)-->
+
+{% block loggedin_content %} <!--Defining the logged in content that will be inherited by the parent template(base.html)-->
+<div id="formpage">
+<form method="POST" class="form"> <!--Once this form is submitted, a request from the user will be sent to the view function of this template using the POST method-->
+    {% csrf_token %} <!--For Cross-Site Request Forgery(CSRF) protection-->
+    <!--The fields of the "form" that's stored in the context of view function of this template is passed to this template and displayed below.-->
+    <h2 class="horizontal-center">Profile Editing FORM</h2>
+    {% if form.non_field_errors %} <!--If the non-field validation of this form fails, then this displays validation errors stated in the forms.py for this form-->
+        {{ form.non_field_errors }}
+    {% endif %}
+    <label for="username">Username:</label>
+    {{form.username}}
+    <br>
+    <label for="first_name">First Name:</label>
+    {{form.first_name}}
+    <br>
+    <label for="last_name">Last Name:</label>
+    {{form.last_name}}
+    <br>
+    <label for="email">Email:</label>
+    {{form.email}}
+    <br>
+    <button type="submit" class="form-btn">Submit</button>
+    <p class="horizontal-center">Want to change password instead? Change password by clicking <a href="{% url 'password_change' %}">here!</a></p>
+    <br>
+</form>
+</div>
+</div>
+{% endblock %}
+{% block loggedout_content %} <!--Defining the logged out content that will be inherited by the parent template(base.html)-->
+<div id="accessdeniedpage">
+    <div id="accessdenied">
+        <h1>Access Denied!</h1>
+        <p> In order to access this page, you'll need to login to this website first!</p><br>
+        <p> Click <a href="{% url 'login' %}">here</a> to login to the website.</p>
+        <p> Don't have an account? Click <a href="{% url 'signup' %}">here</a> to sign up first</p>
+    </div>
+</div>
+{% endblock %}

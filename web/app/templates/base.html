@@ -1,0 +1,37 @@
+{% load static %} <!--loading the template tag of static into this template -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title> <!--The title of the child template will be inherited here-->
+        <link rel="stylesheet" href="{% static 'css/base.css' %}"> <!--This stylesheet of the parent template will be added with the stylesheet of the child template-->
+        {% block style %}{% endblock %} <!--The stylesheet of the child template will be inherited here-->
+        <link rel="icon" href="{% static 'images/logo.png' %}"> <!--Every page of the webapp will have the same logo-->
+    </head>
+    <body>
+        <div id="navbar"> <!--Every page of the webapp will contain a navigation bar-->
+            <h2 href="{% url 'home' %}">CPF</h2>
+            <div id="nav">
+                <a href="{% url 'home' %}">HOME</a>
+                <a href="{% url 'docs' %}">DOCS</a>
+                <a href="{% url 'model' %}">MODEL</a>
+            </div>
+            <div id="right_btn">
+                {% if user.is_authenticated %} <!--Profile button will be displayed  in the navigation bar if the user is logged in-->
+                    <a href="{% url 'profile' %}">PROFILE</a>
+                {% else %} <!--Signup and login buttons will be displayed in the navigation bar if the user is logged out-->
+                    <p id="register_and_login"><a href="{% url 'signup' %}">SIGN UP</a> | <a href="{% url 'login' %}">LOGIN</a></p>
+                {% endif %}
+            </div>
+        </div>
+        {% block default_content %}{% endblock %} <!--This will always be displayed dispite the fact that the user is logged in or not-->
+
+        {% if user.is_authenticated %}
+            {% block loggedin_content %}{% endblock %} <!--This will be displayed only if the user is logged in-->
+        {% else %} 
+            {% block loggedout_content %}{% endblock %} <!--This will be displayed only if the user is logged out-->   
+        {% endif %}
+    </body>
+</html>
+

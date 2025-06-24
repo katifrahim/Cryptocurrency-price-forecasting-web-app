@@ -1,0 +1,63 @@
+body{
+    background-image: url("/static/images/bg_home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:100vw;
+    margin:0;
+}
+#homepage{
+    width:100%;
+    padding:5%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:50px;
+}
+#leftside{
+    max-width:40%;
+    min-width:500px;
+}
+#rightside{
+    max-width:50%;
+    min-width:500px;
+}
+#model_graph{
+    width:100%;
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    border-radius:5px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@keyframes floating{
+    0%{transform: translate(0, 0px);}
+    50%{transform:translate(0, 15px);}
+    100%{transform: translate(0, 0px);}
+}
+#docs-btn{
+    border-style:solid;
+    border-color:black;
+    font-size: 16px;  
+    border-width:1px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    background: white;
+    transition: 0.3s;
+    color:black;
+}
+#docs-btn:hover{
+    background:#40434A;
+    color:white;
+}

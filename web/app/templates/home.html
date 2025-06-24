@@ -1,0 +1,20 @@
+{% extends "base.html" %} <!--Links this child template(home.html) to the parent template(base.html)-->
+{% load static %} <!--loading the template tag of static into this template -->
+
+
+{% block title %}Home{% endblock %} <!--Defining the title of this template that will be inherited by the parent template(base.html)-->
+{% block style %}<link rel="stylesheet" href="{% static 'css/home.css' %}">{% endblock %} <!--Defining the stylesheet of this template that will be inherited by the parent template(base.html)-->
+
+{% block default_content %} <!--Defining the default content that will be inherited by the parent template(base.html)-->
+<div id="homepage">
+    <div id="leftside">
+        <h1>Crypto Price Forecaster</h1>
+        <p>Welcome to our AI-powered cryptocurrency price forecasting platform. Currently, this web application predicts the future price of Bitcoin, Ethereum and Dogecoin to upto 15 days into the future. <br><br>New to this website? Check out our user documentation to learn how to navigate and use this website effectively!</p>
+        <br>
+        <a id="docs-btn" href="/docs/">User Docs</a>
+    </div>
+    <div id="rightside">
+        <img id="model_graph" src="{% static 'images/model_graph.png' %}">
+    </div>
+</div>
+{% endblock %}

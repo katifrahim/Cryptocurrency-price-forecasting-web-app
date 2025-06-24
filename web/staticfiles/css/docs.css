@@ -1,0 +1,30 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    width:100%;
+}
+a{
+    color: blue;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+#docspage{
+    max-width:800px;
+    padding-top:70px;
+    padding-left: 5%;
+    padding-right:5%;
+}
+#docspage img{
+    width:100%;
+    border-style: solid;
+    border-color: black;
+    border-width:1px;
+    border-radius:5px;
+}
+.horizontal-center{
+    text-align: center;
+}

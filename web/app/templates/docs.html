@@ -1,0 +1,63 @@
+{% extends "base.html" %} <!--Links this child template(home.html) to the parent template(base.html)-->
+{% load static %} <!--loading the template tag of static into this template -->
+
+
+{% block title %}Docs{% endblock %} <!--Defining the title of this template that will be inherited by the parent template(base.html)-->
+{% block style %}<link rel="stylesheet" href="{% static 'css/docs.css' %}">{% endblock %} <!--Defining the stylesheet of this template that will be inherited by the parent template(base.html)-->
+
+{% block default_content %} <!--Defining the default content that will be inherited by the parent template(base.html)-->
+<div id="docspage">
+    <h1 class="horizontal-center">User Documentation</h1>
+    <hr>
+    <p class="horizontal-center">Welcome to this page! Here we will guide you on how to navigate and use this website effectively!</p>
+    <hr>
+    <br>
+    <h2 class="horizontal-center">REGISTERATION</h2>
+    <h3>Signup:</h3>
+    <p>After coming to this website a new user would need to <a href="{% url 'signup' %}">signup</a> to this website by using the signup button that will be available in the navigation bar of the page in order to access the main features of the website.</p>
+    <img src="{% static 'images/signup.png' %}">
+    <br>
+    <br>
+    <h3>Login:</h3>
+    <p>After signing up to this page, the user would also need to <a href="{% url 'login' %}">login</a> to this website by using the login button that will also be available in the navigation bar of the page in order to access the main features of the website.</p>
+    <img src="{% static 'images/login.png' %}">
+    <br>
+    <br>
+    <br>
+    <h2 class="horizontal-center">PROFILE</h2>
+    <br>
+    <img src="{% static 'images/profile.png' %}">
+    <br>
+    <br>
+    <p>After completing the registeration process, a <a href="{% url 'profile' %}">profile</a> button will appear instead of the signup and login button in the navigation bar of the page. This is the profile page of the user, where the user can view their user information and history. In the same page the user can edit their profile information, change their password and logout from the page.</p>
+    <h3>Edit Profile:</h3>
+    <img src="{% static 'images/edit_profile.png' %}">
+    <br>
+    <br>
+    <p>After clicking on the edit profile button present in the profile page, a similar form like the signup form will appear where the user can change their information. After submitting this form the user would need to relogin into the page for security reasons.</p>
+    <h3>Change Password:</h3>
+    <br>
+    <img src="{% static 'images/password_change.png' %}">
+    <br>
+    <br>
+    <p>After clicking on the <a href="{% url 'password_change' %}">change password</a> button that is also present in the profile page, a password change form will appear where the user can change their password.</p>
+    <h3>Logout:</h3>
+    <p>The logout button will be available at the lower left side of the <a href="{% url 'profile' %}">profile page</a>. The user can only logout from the website using this button!</p>
+    <br>
+    <h2 class="horizontal-center">AI MODEL</h2>
+    <br>
+    <img src="{% static 'images/model.png' %}">
+    <br>
+    <br>
+    <p>After logging into the page the user will be able to access the <a href="{% url 'model' %}">AI model page</a> where they can predict the future price of their favourite cryptocurrency with the help of Artificial Intelligence.</p>
+    <h3>Input:</h3>
+    <p>On the right hand side of the page, the user will have to input two values: "Cryptocurrency name" and "Number of days". The number of days refers to the number of days into the future of which the model will give the results. The cryptocurrency name refers to the cryptocurrency of which the model will give results. Currently, the model can predict upto 15 days into the future and supports three cryptocurrencies: Bitcoin, Ethereum and Dogecoin.</p>
+    <h3>Output:</h3>
+    <p>On the left hand side of the page, the results of the prediction will be displayed after the user has submitted the input values. The prediction graph is used to visualize the results of the prediction, while the prediction details showcases the trend and accuracy of the prediction. The accuracy of the prediction has been pre-defined after testing it multiple times with each input value.</p>
+    <h3>Note:</h3>
+    <p>The AI model page can take some time to show the results as it has to go through the entire training process in the backend. The duration of this process depends on the specification of the user's device.</p>
+    <br>
+    <hr>
+    <br>
+</div>
+{% endblock %}
