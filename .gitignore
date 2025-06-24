@@ -15,6 +15,9 @@ pyvenv.cfg
 # Django sqlite db
 web/db.sqlite3
 
+# Share folder
+share/
+
 # Env variables
 .env
 *.env
