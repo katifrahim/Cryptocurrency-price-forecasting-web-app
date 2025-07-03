@@ -44,21 +44,6 @@ This web app is built using Django. It has a built-in python-based Long Short-Te
    11. Inserting the prediction results to the UserLogs database table.
    12. Sending the prediction results and the form to the template.
 
-## Setup instructions
-1. Open the terminal/ command prompt.
-2. Check the python version of your system using by typing `python --version`.
-3. If python is not installed on your system or if it's not up-to-date, download and install it from [python.org](https://www.python.org/).
-4. During the installation, check the box for *Add Python to PATH* and choose the option to install the *Python Launcher*.
-5. Download venv by typing `pip install venv` in terminal/command prompt.
-6. Navigate to the WebApp folder using `cd`. For example: `cd WebApp`.
-7. Create the venv by typing `python -m venv venv`.
-8. Then, to activate that venv in WINDOWS type `WebApp\cripts\activate.bat` within the same directory.
-10. To activate that venv in MacOS type `source venv/bin/activate` within the same directory.
-11. To install the dependencies of the web application, type `pip install -r requirements.txt`.
-12. Type the following command to initialize the web application : `python manage.py migrate`.
-13. Type the following command to run the Django development server : `python manage.py runserver`.
-14. Open the web browser and go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
-
 ## Design and Plan
 ### User Interface (UI):
 [Web App UI Design Overview in Figma](https://www.figma.com/design/QBmbxszGzhhZtziTtdYsho/Web-App-UI-Design-Overview?node-id=0-1&t=MFBIG7MIZlCv3lXU-1)
@@ -78,3 +63,17 @@ This web app is built using Django. It has a built-in python-based Long Short-Te
 ![image](https://github.com/user-attachments/assets/16958372-dff5-47a5-8e43-99b27e2a6c97)
 ![image](https://github.com/user-attachments/assets/56d52465-9b64-4c2e-9324-f31e1eefc4de)
 
+## Setup instructions
+1. Open the terminal/ command prompt.
+2. Check the python version of your system using by typing `python --version`.
+3. If python is not installed on your system or if it's not up-to-date, download and install it from [python.org](https://www.python.org/).
+4. During the installation, check the box for *Add Python to PATH* and choose the option to install the *Python Launcher*.
+5. Download venv by typing `pip install venv` in terminal/command prompt.
+6. Navigate to the WebApp folder using `cd`. For example: `cd WebApp`.
+7. Create the venv by typing `python -m venv venv`.
+8. Then, to activate that venv in WINDOWS type `WebApp\cripts\activate.bat` within the same directory.
+10. To activate that venv in MacOS type `source venv/bin/activate` within the same directory.
+11. To install the dependencies of the web application, type `pip install -r requirements.txt`.
+12. Type the following command to initialize the web application : `python manage.py migrate`.
+13. Type the following command to run the Django development server : `python manage.py runserver`.
+14. Open the web browser and go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
