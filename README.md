@@ -2,8 +2,6 @@
 ## Overview
 This web app is built using Django. It has a built-in python-based Long Short-Term Memory (LSTM) model that uses the entire historical Open-High-Low-Close (OHLC) and news-sentiment-analysis data of the choosen cryptocurrency to automatically perform technical and fundamental analysis on it and forecast its future price till upto 15 days ahead with over 50% accuracy.
 
-![Screenshot 2025-06-24 191659](https://github.com/user-attachments/assets/0f1ba3a7-3ef7-4ad0-879d-19bed4789c84)
-
 ## Features
 - Real-time price forecasting of bitcoin, ethereum and dogecoin till 5, 10 and 15 days ahead with over 50% accuracy.
 - Dashboard with the chart, accuracy and trend of the forecasts.
@@ -11,7 +9,19 @@ This web app is built using Django. It has a built-in python-based Long Short-Te
 - User history.
 - User docs.
 
-## Main Tech Stack
+## Screenshots
+![Screenshot 2025-06-24 191659](https://github.com/user-attachments/assets/0f1ba3a7-3ef7-4ad0-879d-19bed4789c84)
+![image](https://github.com/user-attachments/assets/531ee7d9-66f6-4505-a247-77c503281917)
+![image](https://github.com/user-attachments/assets/9bc00200-7a4d-42aa-afbb-50036e92082c)
+![image](https://github.com/user-attachments/assets/f62459df-ba46-4392-a057-747aa44fe7e8)
+![image](https://github.com/user-attachments/assets/2d83aa73-be0f-459e-aa0d-05118520a151)
+![image](https://github.com/user-attachments/assets/446a6dab-685f-4363-976f-a1882a09af5f)
+![image](https://github.com/user-attachments/assets/31b2458b-b16d-4ec0-9425-6965683d5ba7)
+![image](https://github.com/user-attachments/assets/9748865d-f69a-4b3a-a0e3-1d748f85cda4)
+![image](https://github.com/user-attachments/assets/16958372-dff5-47a5-8e43-99b27e2a6c97)
+![image](https://github.com/user-attachments/assets/56d52465-9b64-4c2e-9324-f31e1eefc4de)
+
+## Tech Stack
 - Python
 - Django 
 - Pytorch (for LSTM)
@@ -52,16 +62,7 @@ This web app is built using Django. It has a built-in python-based Long Short-Te
 ### Entity Relationship Diagram (ERD):
 ![image](https://github.com/user-attachments/assets/cb7e8754-cdd4-4ce6-8804-3dd0196d9e9e)
 
-## Screenshots
-![image](https://github.com/user-attachments/assets/531ee7d9-66f6-4505-a247-77c503281917)
-![image](https://github.com/user-attachments/assets/9bc00200-7a4d-42aa-afbb-50036e92082c)
-![image](https://github.com/user-attachments/assets/f62459df-ba46-4392-a057-747aa44fe7e8)
-![image](https://github.com/user-attachments/assets/2d83aa73-be0f-459e-aa0d-05118520a151)
-![image](https://github.com/user-attachments/assets/446a6dab-685f-4363-976f-a1882a09af5f)
-![image](https://github.com/user-attachments/assets/31b2458b-b16d-4ec0-9425-6965683d5ba7)
-![image](https://github.com/user-attachments/assets/9748865d-f69a-4b3a-a0e3-1d748f85cda4)
-![image](https://github.com/user-attachments/assets/16958372-dff5-47a5-8e43-99b27e2a6c97)
-![image](https://github.com/user-attachments/assets/56d52465-9b64-4c2e-9324-f31e1eefc4de)
+
 
 ## Setup instructions
 1. Open the terminal/ command prompt.
