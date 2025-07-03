@@ -44,14 +44,6 @@ This web app is built using Django. It has a built-in python-based Long Short-Te
    11. Inserting the prediction results to the UserLogs database table.
    12. Sending the prediction results and the form to the template.
 
-## Design and Plan
-### User Interface (UI):
-[Web App UI Design Overview in Figma](https://www.figma.com/design/QBmbxszGzhhZtziTtdYsho/Web-App-UI-Design-Overview?node-id=0-1&t=MFBIG7MIZlCv3lXU-1)
-### System Flowchart:
-![System Flowchart](https://github.com/user-attachments/assets/b0b80f8e-5e7d-42e2-b9b4-89dbce178b81)
-### Entity Relationship Diagram (ERD):
-![image](https://github.com/user-attachments/assets/cb7e8754-cdd4-4ce6-8804-3dd0196d9e9e)
-
 ## Setup instructions
 1. Open the terminal/ command prompt.
 2. Check the python version of your system using by typing `python --version`.
@@ -66,3 +58,23 @@ This web app is built using Django. It has a built-in python-based Long Short-Te
 12. Type the following command to initialize the web application : `python manage.py migrate`.
 13. Type the following command to run the Django development server : `python manage.py runserver`.
 14. Open the web browser and go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+
+## Design and Plan
+### User Interface (UI):
+[Web App UI Design Overview in Figma](https://www.figma.com/design/QBmbxszGzhhZtziTtdYsho/Web-App-UI-Design-Overview?node-id=0-1&t=MFBIG7MIZlCv3lXU-1)
+### System Flowchart:
+![System Flowchart](https://github.com/user-attachments/assets/b0b80f8e-5e7d-42e2-b9b4-89dbce178b81)
+### Entity Relationship Diagram (ERD):
+![image](https://github.com/user-attachments/assets/cb7e8754-cdd4-4ce6-8804-3dd0196d9e9e)
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/531ee7d9-66f6-4505-a247-77c503281917)
+![image](https://github.com/user-attachments/assets/9bc00200-7a4d-42aa-afbb-50036e92082c)
+![image](https://github.com/user-attachments/assets/f62459df-ba46-4392-a057-747aa44fe7e8)
+![image](https://github.com/user-attachments/assets/2d83aa73-be0f-459e-aa0d-05118520a151)
+![image](https://github.com/user-attachments/assets/446a6dab-685f-4363-976f-a1882a09af5f)
+![image](https://github.com/user-attachments/assets/31b2458b-b16d-4ec0-9425-6965683d5ba7)
+![image](https://github.com/user-attachments/assets/9748865d-f69a-4b3a-a0e3-1d748f85cda4)
+![image](https://github.com/user-attachments/assets/16958372-dff5-47a5-8e43-99b27e2a6c97)
+![image](https://github.com/user-attachments/assets/56d52465-9b64-4c2e-9324-f31e1eefc4de)
+
