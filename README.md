@@ -7,7 +7,7 @@ This web app is built using Django. It has a built-in python-based Long Short-Te
 ## Features
 - Real-time price forecasting of bitcoin, ethereum and dogecoin till 5, 10 and 15 days ahead with over 50% accuracy.
 - Dashboard with the chart, accuracy and trend of the forecasts.
-- User authentication system.
+- User authentication and access control system.
 - User history.
 - User docs.
 
