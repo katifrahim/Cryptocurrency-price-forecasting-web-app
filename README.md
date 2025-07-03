@@ -2,6 +2,8 @@
 ## Overview
 This web app is built using Django. It has a built-in python-based Long Short-Term Memory (LSTM) model that uses the entire historical Open-High-Low-Close (OHLC) and news-sentiment-analysis data of the choosen cryptocurrency to automatically perform technical and fundamental analysis on it and forecast its future price till upto 15 days ahead with over 50% accuracy.
 
+![Screenshot 2025-06-24 191659](https://github.com/user-attachments/assets/0f1ba3a7-3ef7-4ad0-879d-19bed4789c84)
+
 ## Features
 - Real-time price forecasting of bitcoin, ethereum and dogecoin till 5, 10 and 15 days ahead with over 50% accuracy.
 - Dashboard with the chart, accuracy and trend of the forecasts.
@@ -10,7 +12,6 @@ This web app is built using Django. It has a built-in python-based Long Short-Te
 - User docs.
 
 ## Screenshots
-![Screenshot 2025-06-24 191659](https://github.com/user-attachments/assets/0f1ba3a7-3ef7-4ad0-879d-19bed4789c84)
 ![image](https://github.com/user-attachments/assets/531ee7d9-66f6-4505-a247-77c503281917)
 ![image](https://github.com/user-attachments/assets/9bc00200-7a4d-42aa-afbb-50036e92082c)
 ![image](https://github.com/user-attachments/assets/f62459df-ba46-4392-a057-747aa44fe7e8)
